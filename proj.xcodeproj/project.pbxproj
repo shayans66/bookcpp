@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1507E763249A9C26004B24FE /* inventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1507E762249A9C26004B24FE /* inventory.cpp */; };
 		15F91D222499A78F00889BA0 /* bookmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F91D1B2499A78E00889BA0 /* bookmain.cpp */; };
 		15F91D232499A78F00889BA0 /* report.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F91D1C2499A78E00889BA0 /* report.cpp */; };
 		15F91D242499A78F00889BA0 /* cashier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F91D1D2499A78E00889BA0 /* cashier.cpp */; };
 		15F91D252499A78F00889BA0 /* book.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F91D1F2499A78E00889BA0 /* book.cpp */; };
-		15F91D262499A78F00889BA0 /* inventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F91D212499A78F00889BA0 /* inventory.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,14 +27,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1507E762249A9C26004B24FE /* inventory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = inventory.cpp; path = proj/inventory.cpp; sourceTree = "<group>"; };
+		1507E764249A9C36004B24FE /* report.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = report.h; path = proj/report.h; sourceTree = "<group>"; };
+		1507E765249AC946004B24FE /* inventory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = inventory.h; path = proj/inventory.h; sourceTree = "<group>"; };
 		15F91D112499A68300889BA0 /* proj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = proj; sourceTree = BUILT_PRODUCTS_DIR; };
-		15F91D1B2499A78E00889BA0 /* bookmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bookmain.cpp; path = proj/bookmain.cpp; sourceTree = "<group>"; };
+		15F91D1B2499A78E00889BA0 /* bookmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bookmain.cpp; path = proj/bookmain.cpp; sourceTree = "<group>"; tabWidth = 4; };
 		15F91D1C2499A78E00889BA0 /* report.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = report.cpp; path = proj/report.cpp; sourceTree = "<group>"; };
 		15F91D1D2499A78E00889BA0 /* cashier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cashier.cpp; path = proj/cashier.cpp; sourceTree = "<group>"; };
 		15F91D1E2499A78E00889BA0 /* book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = book.h; path = proj/book.h; sourceTree = "<group>"; };
 		15F91D1F2499A78E00889BA0 /* book.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = book.cpp; path = proj/book.cpp; sourceTree = "<group>"; };
 		15F91D202499A78E00889BA0 /* bookdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bookdata.txt; path = proj/bookdata.txt; sourceTree = "<group>"; };
-		15F91D212499A78F00889BA0 /* inventory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = inventory.cpp; path = proj/inventory.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,10 @@
 				15F91D202499A78E00889BA0 /* bookdata.txt */,
 				15F91D1B2499A78E00889BA0 /* bookmain.cpp */,
 				15F91D1D2499A78E00889BA0 /* cashier.cpp */,
-				15F91D212499A78F00889BA0 /* inventory.cpp */,
 				15F91D1C2499A78E00889BA0 /* report.cpp */,
+				1507E762249A9C26004B24FE /* inventory.cpp */,
+				1507E764249A9C36004B24FE /* report.h */,
+				1507E765249AC946004B24FE /* inventory.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,7 +142,7 @@
 				15F91D242499A78F00889BA0 /* cashier.cpp in Sources */,
 				15F91D222499A78F00889BA0 /* bookmain.cpp in Sources */,
 				15F91D232499A78F00889BA0 /* report.cpp in Sources */,
-				15F91D262499A78F00889BA0 /* inventory.cpp in Sources */,
+				1507E763249A9C26004B24FE /* inventory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
