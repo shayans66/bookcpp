@@ -11,7 +11,26 @@
 #include <stdio.h>
 #include <iostream>
 
+#include "book.h"
 
 
-double calculateTax(double);
+using namespace std;
+
+class Cashier {
+private:
+    Book* allBooks;
+public:
+    Cashier(Book* books) {
+        allBooks = books;
+    }
+    
+    
+    double calculateTax(double price, double tax);
+
+
+    void purchaseBook(string bookTitle);
+    
+};
+
+
 

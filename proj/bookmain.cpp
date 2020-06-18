@@ -8,11 +8,12 @@
 #include <ctime>
 #include "book.h"	//Include the book header
 #include "report.h" //Includes the report header
+#include "cashier.h"
 
 using namespace std;
 
 int main() {
-	string dataFile = "bookdata.txt"; //place path to data file
+	string dataFile = "/Users/sarneveshtfamily/Documents/Github/bookcpp/proj/bookdata.txt"; //place path to data file
 	string rowData;	//String to read if row/line in text
 
 	//Declare a single variable per each of the data to parse
@@ -43,7 +44,7 @@ int main() {
 
 	ifstream fileHandler(dataFile);	//Create file handler
 	if (fileHandler.is_open())
-		while (fileHandler.good() && index < 5)     //while there is data
+		while (fileHandler.good() )     //while there is data
 			fileHandler >> allBooks[index++]; //Use overload input stream (file handler is an input stream )
 
 	int choice;
@@ -61,36 +62,18 @@ int main() {
 		std::cout << "===================================================" << endl;
 		//std::cout << "Date:" << (timeStruct->tm_year) << '-' << (timeStruct->tm_mon) << '-' << (timeStruct->tm_mday) << std::endl;
 		std::cout << "Date:" << endl;
-		int flag;
-		for (int i = 0; i < 50; i++)
-		{
-			flag = 1;
-			Book tempBook = allBooks[i];	//Get book
-			string title = tempBook.GetTitle();
-			double tax = 0.05;
-			if (title.compare(bookTitle) == 0)
-			{
-				int quantity;
-				std::cout << "Enter Quantity" << endl;
-				cin >> quantity;
-				std::cout << "Quantity		ISBN		Title					Price		Total" << endl;
-				std::cout << "-------------------------------------------------------------------" << endl;
-				std::cout << quantity << "		" << tempBook.GetIsbn() << "		" << tempBook.GetTitle() << "		" << tempBook.GetPrice() << "		" << quantity * tempBook.GetPrice() << endl << endl;
-				std::cout << "			Subtotal" << quantity * tempBook.GetPrice() << endl;
-				double taxAmount = quantity * tempBook.GetPrice() * tax;
-				std::cout << "			Tax		" << taxAmount << endl;
-				std::cout << "			Total	" << quantity * tempBook.GetPrice() + taxAmount << endl;
-				std::cout << "Thank You for Shopping with us at Serendipity";
-				flag = 0;
-				break;
-			}
-
-
-		}
-		if (flag == 1)
-		{
-			cout << "No Book with that Title found" << endl;
-		}
+        
+        Cashier cashier = Cashier(allBooks);
+        
+        // this method takes in a title, checks if it works
+        cashier.purchaseBook(title);
+        
+        
+        
+        
+        
+        
+        
 
 	}
 
