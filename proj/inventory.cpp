@@ -21,7 +21,7 @@
 using namespace std;
 
 
-int Lookup_Book(Book b[], string title)
+int Lookup_Book(Book allBooks[], string title)
 {
     //	std::cout << "Please enter the Book Title" << endl;
     //	string bookTitle;
@@ -31,24 +31,27 @@ int Lookup_Book(Book b[], string title)
     int flag = -1;
     for (int i = 0; i < 50; i++)
     {
-        Book tempBook = b[i];	//Get book
-        string Booktitle = tempBook.GetTitle();
+        Book currentBook = allBooks[i];	//Get book
+        string currentBookTitle = currentBook.GetTitle();
 
-        Booktitle = Booktitle.erase(Booktitle.size() - 1);
+        //Booktitle = Booktitle.erase(Booktitle.size() - 1);
         //cout<<"The length is "<<title.length() << " ------"<<Booktitle.length()<<"\n";
-        if (title == Booktitle)
+        cout<<"title="<< title<<endl;
+        cout<<"currentBookTitle="<< currentBookTitle<<endl;
+        int compareResult = title.compare(currentBookTitle);
+        if (strcmp(title.c_str(), currentBookTitle.c_str()))
         {
             flag = i;
             cout << endl;
             cout << "Found the Book" << endl;
-            std::cout << "Title: " << tempBook.GetTitle() << endl;
-            std::cout << "Author: " << tempBook.GetAuthor() << endl;
-            std::cout << "ISBN: " << tempBook.GetIsbn() << endl;
-            std::cout << "Publisher: " << tempBook.GetPublisher() << endl;
-            std::cout << "Date: " << tempBook.GetDate() << endl;
-            std::cout << "Quantity: " << tempBook.GetQuantity() << endl;
-            std::cout << "Cost: $" << setprecision(2) << fixed << tempBook.GetCost() << endl;
-            std::cout << "Price: $" << setprecision(2) << fixed << tempBook.GetPrice() << endl;
+            std::cout << "Title: " << currentBook.GetTitle() << endl;
+            std::cout << "Author: " << currentBook.GetAuthor() << endl;
+            std::cout << "ISBN: " << currentBook.GetIsbn() << endl;
+            std::cout << "Publisher: " << currentBook.GetPublisher() << endl;
+            std::cout << "Date: " << currentBook.GetDate() << endl;
+            std::cout << "Quantity: " << currentBook.GetQuantity() << endl;
+            std::cout << "Cost: $" << setprecision(2) << fixed << currentBook.GetCost() << endl;
+            std::cout << "Price: $" << setprecision(2) << fixed << currentBook.GetPrice() << endl;
             std::cout << endl;
             break;
         }

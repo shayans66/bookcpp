@@ -66,7 +66,7 @@ int main() {
         Cashier cashier = Cashier(allBooks);
         
         // this method takes in a title, checks if it works
-        cashier.purchaseBook(title);
+        cashier.purchaseBook(bookTitle);
         
         
         
